@@ -1,0 +1,21 @@
+db:
+  host: "localhost"
+  port: 27017
+  database_name: "chess_archive"
+  collection_name: "pages"
+
+logic:
+  delay: 0.5
+  max_pages: 15000
+  exclude_prefixes:
+    - "https://chesspro.ru/_images/"
+
+targets:
+  - url: "https://chesspro.ru/"
+    source_name: "ChessPro Main"
+
+  - url: "https://chess-world.net/"
+    source_name: "Chess World"
+
+  - url: "https://www.obninskchess.ru/forum2/"
+    source_name: "Obninsk Chess Forum"
